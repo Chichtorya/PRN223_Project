@@ -137,3 +137,145 @@ D:\FPT\kỳ 8\PRN231\Project nè\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.pd
 D:\FPT\kỳ 8\PRN231\Project nè\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.genruntimeconfig.cache
 D:\FPT\kỳ 8\PRN231\Project nè\ProjectPRN231\obj\Debug\net6.0\ref\ProjectPRN231.dll
 D:\FPT\kỳ 8\PRN231\Project nè\ProjectPRN231\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\appsettings.Development.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.exe
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\appsettings.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.deps.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.runtimeconfig.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.pdb
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Humanizer.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.csproj.AssemblyReference.cache
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.AssemblyInfoInputs.cache
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.AssemblyInfo.cs
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.csproj.CoreCompileInputs.cache
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.MvcApplicationPartsAssemblyInfo.cs
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.MvcApplicationPartsAssemblyInfo.cache
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.sourcelink.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets.build.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets.development.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.ProjectPRN231.Microsoft.AspNetCore.StaticWebAssets.props
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.build.ProjectPRN231.props
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProjectPRN231.props
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProjectPRN231.props
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\staticwebassets.pack.json
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\scopedcss\bundle\ProjectPRN231.styles.css
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectP.B9BCB6C8.Up2Date
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\refint\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.pdb
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.genruntimeconfig.cache
+D:\FPT\kỳ 8\PRN231\ProjectTodo\New folder\ProjectPRN231\obj\Debug\net6.0\ref\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\appsettings.Development.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.exe
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\appsettings.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.deps.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.runtimeconfig.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\ProjectPRN231.pdb
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Humanizer.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.csproj.AssemblyReference.cache
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.AssemblyInfoInputs.cache
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.AssemblyInfo.cs
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.csproj.CoreCompileInputs.cache
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.MvcApplicationPartsAssemblyInfo.cs
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.MvcApplicationPartsAssemblyInfo.cache
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.sourcelink.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets.build.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets.development.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.ProjectPRN231.Microsoft.AspNetCore.StaticWebAssets.props
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.build.ProjectPRN231.props
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProjectPRN231.props
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProjectPRN231.props
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\staticwebassets.pack.json
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\scopedcss\bundle\ProjectPRN231.styles.css
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectP.B9BCB6C8.Up2Date
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\refint\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.pdb
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.genruntimeconfig.cache
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ref\ProjectPRN231.dll
