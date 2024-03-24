@@ -1,6 +1,7 @@
-create database toDo
+drop database toDo2
+create database toDo2
 CREATE TABLE Users (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY , 
     RoleId INT,
     FirstName NVARCHAR(100),
     LastName NVARCHAR(100),
@@ -13,11 +14,11 @@ CREATE TABLE Users (
     FOREIGN KEY (RoleId) REFERENCES Roles(Id)
 );
 CREATE TABLE Roles (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     Name NVARCHAR(50)
 );
 CREATE TABLE Plants (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     Name NVARCHAR(100),
     Description NVARCHAR(MAX),
     Title NVARCHAR(100),
@@ -28,7 +29,7 @@ CREATE TABLE Plants (
     FOREIGN KEY (UserId) REFERENCES Users(Id)
 );
 CREATE TABLE Tasks (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     Name NVARCHAR(100),
     Title NVARCHAR(100),
     Description NVARCHAR(MAX),
@@ -41,11 +42,11 @@ CREATE TABLE Tasks (
 );
 
 CREATE TABLE Tags (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     Name NVARCHAR(50)
 );
 CREATE TABLE Milestones (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     Type NVARCHAR(50),
     CreatedAt DATETIME,
     UpdatedAt DATETIME,
@@ -56,7 +57,7 @@ CREATE TABLE Milestones (
     Status NVARCHAR(50),
 );
 CREATE TABLE Plant_Tag (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     PlantId INT,
     TagId INT,
     FOREIGN KEY (PlantId) REFERENCES Plants(Id),
@@ -64,7 +65,7 @@ CREATE TABLE Plant_Tag (
 );
 
 CREATE TABLE Task_Tag (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     TaskId INT,
     TagId INT,
     FOREIGN KEY (TaskId) REFERENCES Tasks(Id),
@@ -72,7 +73,7 @@ CREATE TABLE Task_Tag (
 );
 
 CREATE TABLE Comments (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     TaskId INT,
     UserId INT,
     Content NVARCHAR(MAX),
@@ -81,7 +82,7 @@ CREATE TABLE Comments (
     FOREIGN KEY (UserId) REFERENCES Users(Id)
 );
 CREATE TABLE Attachments (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     TaskId INT,
     FilePath NVARCHAR(MAX),
     UploadedBy INT,
@@ -90,7 +91,7 @@ CREATE TABLE Attachments (
     FOREIGN KEY (UploadedBy) REFERENCES Users(Id)
 );
 CREATE TABLE UserSettings (
-    Id INT PRIMARY KEY,
+    Id INT IDENTITY  PRIMARY KEY,
     UserId INT,
     DarkMode bit,
     EmailPopup bit,

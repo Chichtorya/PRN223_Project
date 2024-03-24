@@ -1,0 +1,215 @@
+﻿@page
+@model Client.Pages.Plan.PlanUpdateModel
+@{
+    ViewData["Title"] = "Plan Update page";
+}
+
+<div class="container">
+
+    <form id="addPlanForm">
+        <div class=" form-group mb-3">
+            <label for="planName" class="form-label">Tên Plan</label>
+            <input type="text" class="form-control" id="planName" placeholder="Nhập tên plan">
+        </div>
+        <div class="form-group mb-3">
+            <label for="planDescription" class="form-label">Mô tả</label>
+            <textarea class="form-control" id="planDescription" rows="3"></textarea>
+        </div>
+        <div class="form-group mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="customMilestoneCheckbox">
+            <label class="form-check-label" for="customMilestoneCheckbox">Milestone tự chọn</label>
+        </div>
+        <div class="form-group mb-3" id="tagSelect">
+            <label for="tag" class="form-label">Chọn tag</label>
+
+            <select class="form-select" id="tag">
+                <option value="1">Daily</option>
+                <option value="2">Thấp</option>
+                <option value="3">Trung bình</option>
+                <option value="4">Quan trọng</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3" id="milestoneSelect">
+            <label for="milestone" class="form-label">Chọn Milestone</label>
+            <select class="form-select" id="milestone">
+            </select>
+        </div>
+        <div class="form-group mb-3" id="customMilestoneDateRange" style="display: none;">
+            <label for="startDate" class="form-label">Từ ngày</label>
+            <input type="date" class="form-control" id="startDate">
+            <label for="endDate" class="form-label">Đến ngày</label>
+            <input type="date" class="form-control" id="endDate">
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+
+</div>
+<a href="../Plan/PlanList">Back</a>
+
+<script>
+
+    $(document).ready(function () {
+        var today = new Date();
+        var plantId;
+        var formattedDate = today.toISOString().split('T')[0];
+
+        // Set default value for start date input field
+        document.getElementById('startDate').value = formattedDate;
+
+        // Set default value for end date input field
+        document.getElementById('endDate').value = formattedDate;
+        var userId = localStorage.getItem('userid');
+        var token = localStorage.getItem('token');
+
+        // Lấy danh sách plant từ API và hiển thị trên bảng
+        $.ajax({
+            url: `https://localhost:7145/api/MileStone/${userId}`,
+            type: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token // Thêm bearer token vào tiêu đề Authorization
+            },
+            success: function (data) {
+                if (data && data.length > 0) {
+                    // Lặp qua danh sách milestone để tạo option cho select
+                    data.forEach(function (milestone) {
+                        var startDate = new Date(milestone.plannedStartDate);
+                        var endDate = new Date(milestone.plannedEndDate);
+
+                        // Format ngày tháng năm (dd/mm/yyyy)
+                        var formattedStartDate = startDate.toLocaleDateString();
+                        var formattedEndDate = endDate.toLocaleDateString();
+
+                        // Tạo option cho select
+                        var option = $('<option>', {
+                            value: milestone.id,
+                            text: milestone.type + ' - ' + formattedStartDate + ' to ' + formattedEndDate
+                        });
+
+                        // Thêm option vào select
+                        $('#milestone').append(option);
+                    });
+                } else {
+                    // Nếu không có milestone nào trả về, hiển thị thông báo
+                    $('#milestone').append('<option value="">No milestones available</option>');
+                }
+                getInfo();
+            },
+            error: function () {
+                console.log('Error retrieving data from the API.');
+            }
+        });
+
+
+        $('#addPlanForm').submit(function (event) {
+            event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu bằng cách mặc định
+
+            // Lấy dữ liệu từ các trường input
+            var planName = $('#planName').val();
+            var planDescription = $('#planDescription').val();
+            var milestone = $('#milestone').val();
+            var tag = $('#tag').val();
+
+            var customMilestoneCheckbox = $('#customMilestoneCheckbox').prop('checked');
+            var startDate = $('#startDate').val();
+            var endDate = $('#endDate').val();
+            var formattedStartDate = startDate.split('/').reverse().join('-');
+            var formattedEndDate = endDate.split('/').reverse().join('-');
+            // Tạo đối tượng dữ liệu JSON để gửi đến server
+            // var data = {
+            //     Name: planName,
+            //     Description: planDescription,
+            //     MilestoneId: milestone,
+            //     StartDate: formattedStartDate,
+            //     EndDate: formattedEndDate,
+            //     customMilestoneCheckbox: customMilestoneCheckbox ? "on" : "off", // Chuyển sang "on" hoặc "off"
+            //     tag: tag,
+            //     UserId: userId
+            // };
+            var formData = new FormData();
+            formData.append("Name", planName);
+            formData.append("Description", planDescription);
+            formData.append("MilestoneId", milestone);
+            formData.append("StartDate", formattedStartDate);
+            formData.append("EndDate", formattedEndDate);
+            formData.append("customMilestoneCheckbox", customMilestoneCheckbox ? "on" : "off");
+            formData.append("tag", tag);
+            formData.append("UserId", userId);
+
+            debugger;
+            $.ajax({
+                url: `https://localhost:7145/api/Plan/${plantId}`, 
+                type: 'PUT',
+                // contentType: 'application/json',
+                contentType: false, // Remove the content type
+                processData: false, // Prevent jQuery from processing the data
+                data: formData,
+                success: function (response) {
+                    console.log(response);
+                    window.location.replace("https://localhost:7035/Plan/PlanList");
+
+                },
+                error: function () {
+                    console.log('Error sending data to the server.');
+                }
+            });
+        });
+
+
+        document.getElementById('customMilestoneCheckbox').addEventListener('change', function () {
+            var milestoneSelect = document.getElementById('milestoneSelect');
+            var customMilestoneDateRange = document.getElementById('customMilestoneDateRange');
+
+            if (this.checked) {
+                milestoneSelect.style.display = 'none';
+                customMilestoneDateRange.style.display = 'block';
+            } else {
+                milestoneSelect.style.display = 'block';
+                customMilestoneDateRange.style.display = 'none';
+            }
+            $("cc").click(function () {
+                console.log("help");
+            });
+
+        });
+        function getInfo() {
+            var params = (new URL(document.location)).searchParams;
+            var id = params.get("id");
+            plantId = id;
+            $.ajax({
+                url: `https://localhost:7145/api/Plan/get/${id}`,
+                type: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token // Thêm bearer token vào tiêu đề Authorization
+                },
+                success: function (data) {
+                    console.log(data)
+                    $('#planName').val(data.name);
+                    $('#planDescription').val(data.description);
+
+                    // Đặt trạng thái checkbox dựa trên giá trị của customMilestoneCheckbox
+                    if (data.customMilestoneCheckbox === "on") {
+                        $('#customMilestoneCheckbox').prop('checked', true);
+                    }
+
+                    // Đặt giá trị của tag
+                    $('#tag').val(data.tag);
+
+                    // Đặt giá trị của milestone và ngày bắt đầu, ngày kết thúc nếu có
+                    $('#milestone').append($('<option>', {
+                        value: data.milestoneId,
+                        text: data.milestoneName + ' - ' + data.startDate + ' to ' + data.endDate
+                    }));
+                    if (data.customMilestoneCheckbox === "on") {
+                        $('#startDate').val(data.startDate.split('T')[0]);
+                        $('#endDate').val(data.endDate.split('T')[0]);
+                        $('#customMilestoneDateRange').show();
+                    }
+                },
+                // error: function () { // Remove this extra comma
+                //     console.log('Error retrieving data from the API.');
+                // }
+            });
+        }
+
+    });</script>

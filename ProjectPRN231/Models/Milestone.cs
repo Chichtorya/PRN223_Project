@@ -20,6 +20,9 @@ namespace ProjectPRN231.Models
         public DateTime? ActualStartDate { get; set; }
         public DateTime? ActualEndDate { get; set; }
         public string? Status { get; set; }
+        public bool? HoatDong { get; set; }
+        public bool? Dflag { get; set; }
+        public int? UserId { get; set; }
 
         public virtual ICollection<Plant> Plants { get; set; }
         public virtual ICollection<Task> Tasks { get; set; }

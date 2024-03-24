@@ -279,3 +279,4 @@ D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\refint\ProjectPRN231.dll
 D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.pdb
 D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ProjectPRN231.genruntimeconfig.cache
 D:\FPT\kỳ 8\PRoject\ProjectPRN231\obj\Debug\net6.0\ref\ProjectPRN231.dll
+D:\FPT\kỳ 8\PRoject\ProjectPRN231\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

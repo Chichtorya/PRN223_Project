@@ -10,7 +10,6 @@ namespace ProjectPRN231.Models
             Attachments = new HashSet<Attachment>();
             Comments = new HashSet<Comment>();
             Plants = new HashSet<Plant>();
-            Tasks = new HashSet<Task>();
             UserSettings = new HashSet<UserSetting>();
         }
 
@@ -24,12 +23,13 @@ namespace ProjectPRN231.Models
         public string? Password { get; set; }
         public string? Address { get; set; }
         public DateTime? Dob { get; set; }
+        public bool? HoatDong { get; set; }
+        public bool? Dflag { get; set; }
 
         public virtual Role? Role { get; set; }
         public virtual ICollection<Attachment> Attachments { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Plant> Plants { get; set; }
-        public virtual ICollection<Task> Tasks { get; set; }
         public virtual ICollection<UserSetting> UserSettings { get; set; }
     }
 }

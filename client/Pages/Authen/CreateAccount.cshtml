@@ -1,0 +1,72 @@
+﻿@page
+@model Client.Pages.Authen.CreateAccountModel
+@{
+    ViewData["Title"] = "Create Account";
+}
+
+<div class="container">
+    <h1>Create Account</h1>
+    <form id="createAccountForm">
+        <div class="mb-3">
+            <label for="userName" class="form-label">Username</label>
+            <input type="text" class="form-control" id="userName" required>
+        </div>
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#createAccountForm').submit(function (event) {
+            event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu bằng cách mặc định
+
+            // Lấy dữ liệu từ các trường input
+            var userName = $('#userName').val();
+            var fullName = $('#fullName').val();
+            var password = $('#password').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+
+            // Tạo đối tượng dữ liệu JSON để gửi đến server
+            var data = {
+                UserName: userName,
+                FullName: fullName,
+                Password: password,
+                Email: email,
+                Phone: phone
+            };
+
+            // Gửi AJAX request để tạo tài khoản mới
+            $.ajax({
+                url: '/Account/Create',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    // Xử lý response từ server (nếu cần)
+                    console.log(response);
+                    window.location.href = '/Login'; // Chuyển hướng đến trang đăng nhập sau khi tạo tài khoản thành công
+                },
+                error: function () {
+                    console.log('Error creating account.');
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,233 @@
+﻿@page
+@model Client.Pages.Plan.PlanListModel
+@{
+    ViewData["Title"] = "Plan page";
+}
+
+<a href="/Plan/PlanCreate">Create</a>
+
+@* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ *@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<div class="container">
+    <table id="plantTable" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tasks</th>
+                <th scope="col">Name</th>
+                <th scope="col">Milestone</th>
+                <th scope="col">Tag</th>
+            </tr>
+        </thead>
+        <tbody id="plantTableBody">
+            <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Button trigger modal -->
+<td><a class="export" data-bs-toggle="modal" data-bs-target="#exportModal">Xuất</a></td>
+
+<!-- Modal -->
+<div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exportModalLabel">Chọn khoảng thời gian</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form để chọn khoảng thời gian -->
+                <form id="exportForm">
+                    <div class="mb-3">
+                        <label for="startDateInput" class="form-label">Ngày bắt đầu</label>
+                        <input type="date" class="form-control" id="startDateInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="endDateInput" class="form-label">Ngày kết thúc</label>
+                        <input type="date" class="form-control" id="endDateInput" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" id="confirmExport">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var userId = localStorage.getItem('userid');
+        var token = localStorage.getItem('token');
+
+        // Lấy danh sách plant từ API và hiển thị trên bảng
+        $.ajax({
+            url: `https://localhost:7145/api/Plan/${userId}`,
+            type: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token // Thêm bearer token vào tiêu đề Authorization
+            },
+            success: function (data) {
+                // Kiểm tra nếu có dữ liệu trống
+                if (!data || data.length === 0) {
+                    $('#plantTableBody').html('<tr><td colspan="4">No data available</td></tr>');
+                    return;
+                }
+
+                // Duyệt qua mỗi plant và thêm vào bảng
+                data.forEach(function (plant) {
+                    console.log(plant)
+                    var startDateString = plant.startDate;
+                    var endDateString = plant.endDate;
+
+                    // Chỉ lấy ngày tháng năm từ chuỗi
+                    var startDate = startDateString.substring(0, 10); // Lấy từ vị trí 0 đến vị trí 9
+                    var endDate = endDateString.substring(0, 10);
+
+                    // Kết hợp các giá trị vào một chuỗi để hiển thị
+                    var displayString = plant.milestoneName + ' ' + startDate + ' to ' + endDate;
+                    var row = '<tr>' +
+                        '<td><a class="view" href="../Task/TaskList" data-id="' + plant.id + '">View</a></td>' +
+                        '<td>' + plant.name + '</td>' +
+                        '<td>' + displayString + '</td>' +
+                        '<td>' + (plant.tagName ? plant.tagName : 'N/A') + '</td>' +
+                        '<td><a href="PlanUpdate?id=' + plant.id + '">Update</a></td>' +
+                        "<td><a class=\"delete\" data-id=\"" + plant.id + "\" />Delete</a></td>" +
+                        "<td><a class=\"compelete\" data-id=\"" + plant.id + "\" />Complete</a></td>" +
+
+                        '</tr>';
+
+                    // Thêm dòng vào tbody
+                    $('#plantTableBody').append(row);
+                });
+                addEditDeleteEventHandlers();
+                addEditCompleteEventHandlers();
+            },
+            error: function () {
+                console.log('Error retrieving data from the API.');
+            }
+        });
+
+
+        function addEditDeleteEventHandlers() {
+            // Xử lý sự kiện cho nút Delete
+            $('.delete').on('click', function () {
+                console.log($(this))
+                var plantId = $(this).data('id');
+                var row = $(this).closest('tr'); // Lưu lại dòng hiện tại để có thể xóa sau khi xóa thành công
+
+                // Gửi yêu cầu AJAX để xóa plant
+                $.ajax({
+                    url: 'https://localhost:7145/api/Plan/' + plantId,
+                    type: 'DELETE',
+                    success: function () {
+                        // Xóa dòng từ bảng
+                        row.remove();
+                    },
+                    error: function () {
+                        console.log('Error deleting plant.');
+                    }
+                });
+            });
+        }
+        function addEditCompleteEventHandlers() {
+            // Xử lý sự kiện cho nút Delete
+            $('.compelete').on('click', function () {
+                var plantId = $(this).data('id');
+
+                $.ajax({
+                    url: 'https://localhost:7145/api/Plan/compelete/' + plantId,
+                    type: 'Get',
+                    success: function () {
+                        window.location.reload()
+                    },
+                    error: function () {
+                        console.log('Error deleting plant.');
+                    }
+                });
+            });
+        }
+        function addEditViewEventHandlers() {
+            // Xử lý sự kiện cho nút Delete
+            $('.compelete').on('click', function () {
+                var plantId = $(this).data('id');
+                localStorage.setItem("plantId", plantId);
+
+
+            });
+        }
+        $('.export').on('click', function () {
+            $('#exportModal').modal('show');
+        });
+        $('.close').on('click', function () {
+            $('#exportModal').hide();
+        });
+
+        $('#confirmExport').on('click', function () {
+            // Lấy dữ liệu về khoảng thời gian được chọn
+            var startDate = $('#startDateInput').val();
+            var endDate = $('#endDateInput').val();
+
+            var data = {
+                userId: userId,
+                from: startDate,
+                to: endDate
+                }
+            console.log(data)
+            $.ajax({
+                url: 'https://localhost:7145/api/Plan/Export',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    console.log(response);
+                    if (response) {
+                        // Tạo một mảng chứa dữ liệu
+                        var exportInfo =[ {
+                            'Tổng số plan': response.totalPlans,
+                            'Tổng số task': response.totalTasks,
+
+                            'Số task được tạo ': response.tasksCreatedInRange,
+                            'Số Plant được tạo ': response.plansCreatedInRange,
+
+                            'Số task hoàn thành': response.completedTasks,
+                            'Số plant  hoàn thành': response.completedPlans,
+
+                            'Số task xóa': response.deletedTasks,
+                            'Số plant xóa': response.deletedPlans,
+
+                            'Số task vượt quá': response.overdueTasks,
+                            'Số plant vượt quá': response.overduePlans
+
+                        }];
+                        debugger;
+                        const worksheet = XLSX.utils.json_to_sheet(exportInfo);
+                        const workbook = XLSX.utils.book_new();
+                        XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+                  
+
+                        XLSX.writeFile(workbook, "ExportFile" + '.xlsx');
+                    }
+                },
+                error: function () {
+                    console.log('Error sending data to the server.');
+                }
+            });
+        });
+    });
+
+</script>

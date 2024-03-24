@@ -1,12 +1,11 @@
-﻿using DataAccess.DTOs;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using ProjectPRN231.DTO;
 using ProjectPRN231.Models;
-using ProjectPRN231.Models.DTO;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq.Expressions;
 using System.Security.Claims;
@@ -16,27 +15,26 @@ namespace ProjectPRN231.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
     public class LoginController : ControllerBase
     {
-        private readonly toDoContext _service;
+        private readonly toDo2Context _service;
         private readonly IConfiguration _configuration;
 
-   
+
 
         public LoginController(
             IConfiguration configuration,
-           toDoContext service)
+           toDo2Context service)
         {
             _service = service;
             _configuration = configuration;
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult> Login(LoginDTO login)
+        public async Task<ActionResult> Login( LoginDTO login)
         {
-            var user =  _service
-            .Users.Where(x => x.UserName == login.UserName && x.Password == login.Password).Include(x=>x.Role).FirstOrDefault();
+            var user = _service
+            .Users.Where(x => x.UserName == login.UserName && x.Password == login.Password).Include(x => x.Role).FirstOrDefault();
 
             if (user == null)
             {
@@ -44,11 +42,11 @@ namespace ProjectPRN231.Controllers
             }
 
             List<Claim> claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.NameIdentifier, user.UserName.ToString()),
-            new Claim(ClaimTypes.Role, user.Role.Name.ToString().ToLower()),
-        };
-                
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.UserName.ToString()),
+                new Claim(ClaimTypes.Role, user.RoleId.ToString()),
+            };
+
             var key = new SymmetricSecurityKey(
                 System.Text.Encoding.UTF8.GetBytes(_configuration.GetSection("Jwt:Key").Value!));
 
@@ -59,9 +57,21 @@ namespace ProjectPRN231.Controllers
                  expires: DateTime.UtcNow.AddYears(10),
                  signingCredentials: creds);
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-
-            return Ok(new TokenRequest(jwt, user.Role.Name.ToString().ToLower() == "admin"?1:0 ));
+            SaveTokenSecurely(jwt);
+            return Ok(new TokenRequest(jwt, user.RoleId, user.Id));
         }
+        private void SaveTokenSecurely(string token)
+        {
+            // Puoi salvare il token in un cookie sicuro, ad esempio:
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(1)
+            };
 
+            Response.Cookies.Append("AccessToken", token, cookieOptions);
+        }
     }
 }

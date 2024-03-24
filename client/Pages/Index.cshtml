@@ -4,7 +4,62 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Quản lý công việc</title>
+    <style>
+        /* CSS của bạn */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+            .cta-buttons a {
+                display: inline-block;
+                margin: 10px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chào mừng bạn đến với ứng dụng quản lý công việc!</h1>
+        <p>Hãy khám phá các tính năng hữu ích của chúng tôi.</p>
+        <div class="cta-buttons">
+            <a href="/Authen/Login">Đăng Nhập</a>
+            <a href="/Plan/PlanList">Đăng Ký</a>
+        </div>
+    </div>
+    
+    
+
+
+</body>

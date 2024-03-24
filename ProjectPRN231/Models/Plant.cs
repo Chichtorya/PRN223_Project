@@ -14,9 +14,11 @@ namespace ProjectPRN231.Models
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
-        public string? Title { get; set; }
+        public DateTime? LastUpdate { get; set; }
         public int? UserId { get; set; }
         public int? MilestoneId { get; set; }
+        public bool? HoatDong { get; set; }
+        public bool? Dflag { get; set; }
 
         public virtual Milestone? Milestone { get; set; }
         public virtual User? User { get; set; }

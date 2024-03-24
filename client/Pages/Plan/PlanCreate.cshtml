@@ -1,0 +1,165 @@
+﻿@page
+@model Client.Pages.Plan.PlanCreateModel
+@{
+    ViewData["Title"] = "Plan Create page";
+
+}
+
+
+<form id="addPlanForm">
+    <div class=" form-group mb-3">
+        <label for="planName" class="form-label">Tên Plan</label>
+        <input type="text" class="form-control" id="planName" placeholder="Nhập tên plan">
+    </div>
+    <div class="form-group mb-3">
+        <label for="planDescription" class="form-label">Mô tả</label>
+        <textarea class="form-control" id="planDescription" rows="3"></textarea>
+    </div>
+    <div class="form-group mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="customMilestoneCheckbox">
+        <label class="form-check-label" for="customMilestoneCheckbox">Milestone tự chọn</label>
+    </div>
+    <div class="form-group mb-3" id="tagSelect">
+        <label for="tag" class="form-label">Chọn tag</label>
+
+        <select class="form-select" id="tag">
+            <option value="1">Daily</option>
+            <option value="2">Thấp</option>
+            <option value="3">Trung bình</option>
+            <option value="4">Quan trọng</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3" id="milestoneSelect">
+        <label for="milestone" class="form-label">Chọn Milestone</label>
+        <select class="form-select" id="milestone">
+        </select>
+    </div>
+    <div class="form-group mb-3" id="customMilestoneDateRange" style="display: none;">
+        <label for="startDate" class="form-label">Từ ngày</label>
+        <input type="date" class="form-control" id="startDate">
+        <label for="endDate" class="form-label">Đến ngày</label>
+        <input type="date" class="form-control" id="endDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+</form>
+
+<a href="../Plan/PlanList">Back</a>
+
+
+<script>
+
+    $(document).ready(function () {
+        var today = new Date();
+
+        var formattedDate = today.toISOString().split('T')[0];
+
+        // Set default value for start date input field
+        document.getElementById('startDate').value = formattedDate;
+
+        // Set default value for end date input field
+        document.getElementById('endDate').value = formattedDate;
+        var userId = localStorage.getItem('userid');
+        var token = localStorage.getItem('token');
+
+        // Lấy danh sách plant từ API và hiển thị trên bảng
+        $.ajax({
+            url: `https://localhost:7145/api/MileStone/${userId}`,
+            type: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token // Thêm bearer token vào tiêu đề Authorization
+            },
+            success: function (data) {
+                if (data && data.length > 0) {
+                    // Lặp qua danh sách milestone để tạo option cho select
+                    data.forEach(function (milestone) {
+                        var startDate = new Date(milestone.plannedStartDate);
+                        var endDate = new Date(milestone.plannedEndDate);
+
+                        // Format ngày tháng năm (dd/mm/yyyy)
+                        var formattedStartDate = startDate.toLocaleDateString();
+                        var formattedEndDate = endDate.toLocaleDateString();
+
+                        // Tạo option cho select
+                        var option = $('<option>', {
+                            value: milestone.id,
+                            text: milestone.type + ' - ' + formattedStartDate + ' to ' + formattedEndDate
+                        });
+
+                        // Thêm option vào select
+                        $('#milestone').append(option);
+                    });
+                } else {
+                    // Nếu không có milestone nào trả về, hiển thị thông báo
+                    $('#milestone').append('<option value="">No milestones available</option>');
+                }
+            },
+            error: function () {
+                console.log('Error retrieving data from the API.');
+            }
+        });
+
+
+        $('#addPlanForm').submit(function (event) {
+            event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu bằng cách mặc định
+
+            // Lấy dữ liệu từ các trường input
+            var planName = $('#planName').val();
+            var planDescription = $('#planDescription').val();
+            var milestone = $('#milestone').val();
+            var tag = $('#tag').val();
+
+            var customMilestoneCheckbox = $('#customMilestoneCheckbox').prop('checked');
+            var startDate = $('#startDate').val();
+            var endDate = $('#endDate').val();
+            var formattedStartDate = startDate.split('/').reverse().join('-');
+            var formattedEndDate = endDate.split('/').reverse().join('-');
+            // Tạo đối tượng dữ liệu JSON để gửi đến server
+            var data = {
+                Name: planName,
+                Description: planDescription,
+                MilestoneId: milestone,
+                StartDate: formattedStartDate,
+                EndDate: formattedEndDate,
+                customMilestoneCheckbox: customMilestoneCheckbox ? "on" : "off", // Chuyển sang "on" hoặc "off"
+                tag: tag,
+                UserId: userId
+            };
+            console.log(data)
+            $.ajax({
+                url: 'https://localhost:7145/api/Plan',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    console.log(response);
+                    window.location.replace("https://localhost:7035/Plan/PlanList");
+
+                },
+                error: function () {
+                    console.log('Error sending data to the server.');
+                }
+            });
+        });
+
+
+        document.getElementById('customMilestoneCheckbox').addEventListener('change', function () {
+            var milestoneSelect = document.getElementById('milestoneSelect');
+            var customMilestoneDateRange = document.getElementById('customMilestoneDateRange');
+
+            if (this.checked) {
+                milestoneSelect.style.display = 'none';
+                customMilestoneDateRange.style.display = 'block';
+            } else {
+                milestoneSelect.style.display = 'block';
+                customMilestoneDateRange.style.display = 'none';
+            }
+            $("cc").click(function () {
+                console.log("help");
+            });
+
+        });
+    });
+
+
+</script>

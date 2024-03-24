@@ -1,0 +1,49 @@
+﻿@page
+@model Client.Pages.Account.AccountDetailModel
+@{
+    ViewData["Title"] = "Detail Account";
+
+}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    User Profile
+                </div>
+                <div class="card-body">
+                    <div id="userProfile">
+                        <!-- Thông tin người dùng và cài đặt người dùng sẽ được thêm vào đây bằng JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="../Plan/PlanList">Back</a>
+
+<script>
+    $(document).ready(function () {
+        var userId = localStorage.getItem('userid');
+        $.ajax({
+            url: `https://localhost:7145/api/User/${userId}`,
+            type: 'GET',
+            success: function (data) {
+                // Hiển thị thông tin người dùng và cài đặt người dùng trên trang
+                $('#userProfile').html(
+                    '<p><strong>Username:</strong> ' + data.userName + '</p>' +
+                    '<p><strong>First Name:</strong> ' + data.firstName + '</p>' +
+                    '<p><strong>Last Name:</strong> ' + data.lastName + '</p>' +
+                    '<p><strong>Email:</strong> ' + data.email + '</p>' +
+                    '<p><strong>Mobile:</strong> ' + data.mobile + '</p>' +
+                    '<p><strong>Dark Mode:</strong> ' + data.darkMode + '</p>' +
+                    '<p><strong>Email Popup:</strong> ' + data.emailPopup + '</p>' +
+                    '<p><strong>Popup:</strong> ' +  data.popup + '</p>'
+                );
+            },
+            error: function () {
+                console.log('Error retrieving user profile.');
+            }
+        });
+    });
+</script>

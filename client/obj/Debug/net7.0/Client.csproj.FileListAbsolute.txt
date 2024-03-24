@@ -29,3 +29,4 @@ D:\FPT\kỳ 8\PRoject\Client\obj\Debug\net7.0\refint\Client.dll
 D:\FPT\kỳ 8\PRoject\Client\obj\Debug\net7.0\Client.pdb
 D:\FPT\kỳ 8\PRoject\Client\obj\Debug\net7.0\Client.genruntimeconfig.cache
 D:\FPT\kỳ 8\PRoject\Client\obj\Debug\net7.0\ref\Client.dll
+D:\FPT\kỳ 8\PRoject\Client\obj\Debug\net7.0\scopedcss\Pages\Authen\Login.cshtml.rz.scp.css

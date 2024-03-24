@@ -1,7 +1,43 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\FPT\\k\u1EF3 8\\PRoject\\ProjectPRN231\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\task\\taskcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\task\\taskcreate.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\task\\taskupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\plan\\planupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\plan\\plancreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\account\\accountdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\task\\tasklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\plan\\planlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3857F6-ACB2-40F0-9B1B-7BAF0B5B9BD8}|ProjectPRN231.csproj|d:\\fpt\\k\u1EF3 8\\project\\projectprn231\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B3857F6-ACB2-40F0-9B1B-7BAF0B5B9BD8}|ProjectPRN231.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3857F6-ACB2-40F0-9B1B-7BAF0B5B9BD8}|ProjectPRN231.csproj|d:\\fpt\\k\u1EF3 8\\project\\projectprn231\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B3857F6-ACB2-40F0-9B1B-7BAF0B5B9BD8}|ProjectPRN231.csproj|solutionrelative:dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF664B3C-305D-4434-93A0-0D7E69B899FD}|..\\Client\\Client.csproj|d:\\fpt\\k\u1EF3 8\\project\\client\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +45,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 106,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -217,14 +257,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
@@ -250,10 +282,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:29:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Bookmark",
@@ -438,6 +466,153 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskCreate.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskCreate.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Task\\TaskCreate.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskCreate.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Task\\TaskCreate.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:48:01.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskCreate.cshtml.cs",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskCreate.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Task\\TaskCreate.cshtml.cs",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskCreate.cshtml.cs",
+              "RelativeToolTip": "..\\Client\\Pages\\Task\\TaskCreate.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T18:48:01.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskUpdate.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskUpdate.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Task\\TaskUpdate.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskUpdate.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Task\\TaskUpdate.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:47:48.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlanUpdate.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Plan\\PlanUpdate.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Plan\\PlanUpdate.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Plan\\PlanUpdate.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Plan\\PlanUpdate.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:47:41.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlanCreate.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Plan\\PlanCreate.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Plan\\PlanCreate.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Plan\\PlanCreate.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Plan\\PlanCreate.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:47:38.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskList.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskList.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Task\\TaskList.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Task\\TaskList.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Task\\TaskList.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:47:26.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\ProjectPRN231\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "DTO\\UserDto.cs",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\ProjectPRN231\\DTO\\UserDto.cs",
+              "RelativeToolTip": "DTO\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T18:42:51.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\ProjectPRN231\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\ProjectPRN231\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAwFcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T18:40:08.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEUAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:36:18.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlanList.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Plan\\PlanList.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Plan\\PlanList.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Plan\\PlanList.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Plan\\PlanList.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAEwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:35:28.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountDetail.cshtml",
+              "DocumentMoniker": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Account\\AccountDetail.cshtml",
+              "RelativeDocumentMoniker": "..\\Client\\Pages\\Account\\AccountDetail.cshtml",
+              "ToolTip": "D:\\FPT\\k\u1EF3 8\\PRoject\\Client\\Pages\\Account\\AccountDetail.cshtml",
+              "RelativeToolTip": "..\\Client\\Pages\\Account\\AccountDetail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T18:35:23.294Z",
+              "EditorCaption": ""
             }
           ]
         },

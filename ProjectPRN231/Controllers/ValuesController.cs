@@ -11,12 +11,13 @@ namespace ProjectPRN231.Controllers
 
     public class ValuesController : ControllerBase
     {
-        readonly toDoContext db;
-        public ValuesController(toDoContext toDo) {
+        readonly toDo2Context db;
+        public ValuesController(toDo2Context toDo)
+        {
             db = toDo;
         }
         [HttpGet("st")]
-        public IActionResult  Get()
+        public IActionResult Get()
         {
             //var list = db.Users.ToList();
             return Ok("dafsfnasjfn");

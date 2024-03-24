@@ -4,7 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Client</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Client.styles.css" asp-append-version="true" />
 </head>
@@ -25,27 +36,68 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a id="userRole" href="../Account/AccountDetail"></a>
+                            <a id="logout" class="btn btn-outline-dark me-2" href="#" role="button">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
+ 
+        <!-- Content -->
         <div class="container">
-            &copy; 2024 - Client - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
+    </div>
+  
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @*   <footer class="border-top footer text-muted">
+    <div class="container">
+    &copy; 2024 - Client - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+    </footer> *@
+
+    @*     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script src="https://unpkg.com/bootstrap-table@1.22.3/dist/bootstrap-table.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        // Kiểm tra xem người dùng đã đăng nhập và có vai trò gì
+        var token = localStorage.getItem('token');
+        var role = localStorage.getItem('role');
+        console.log(token)
+        console.log(role)
+
+        // Nếu có token và vai trò được lưu trong localStorage
+        if (token && role) {
+            // Hiển thị vai trò của người dùng
+            document.getElementById('userRole').textContent = role==3?"User":"Admin";
+        }
+        // Nếu không, ẩn biểu tượng user và vai trò
+        else {
+            document.getElementById('logout').style.display = 'none';
+            document.getElementById('userRole').style.display = 'none';
+        }
+
+        document.getElementById('logout').addEventListener('click', function (event) {
+            // Ngăn chặn hành động mặc định của thẻ 'a' (tránh tải lại trang)
+            event.preventDefault();
+
+            // Xóa thông tin trong localStorage
+            localStorage.removeItem('token');
+            localStorage.removeItem('role');
+            localStorage.removeItem('userid');
+            localStorage.removeItem('planid');
+
+            // Chuyển hướng về trang Index
+            window.location.href = '/Index'; // Thay đổi đường dẫn nếu cần thiết
+        });
+    </script>
 </body>
 </html>

@@ -15,17 +15,17 @@ namespace ProjectPRN231.Models
 
         public int Id { get; set; }
         public string? Name { get; set; }
-        public string? Title { get; set; }
+        public DateTime? LastUpdate { get; set; }
         public string? Description { get; set; }
         public int? PlantId { get; set; }
         public int? MilestoneId { get; set; }
         public int? TaskParentId { get; set; }
-        public int? UserId { get; set; }
+        public bool? HoatDong { get; set; }
+        public bool? Dflag { get; set; }
 
         public virtual Milestone? Milestone { get; set; }
         public virtual Plant? Plant { get; set; }
         public virtual Task? TaskParent { get; set; }
-        public virtual User? User { get; set; }
         public virtual ICollection<Attachment> Attachments { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Task> InverseTaskParent { get; set; }

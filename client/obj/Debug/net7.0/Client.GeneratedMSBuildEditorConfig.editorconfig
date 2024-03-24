@@ -18,12 +18,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FPT\kỳ 8\PRoject\Client
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Account/AccountDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBY2NvdW50RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Authen/CreateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVuXENyZWF0ZUFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Authen/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVuXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT/kỳ 8/PRoject/Client/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FPT/kỳ 8/PRoject/Client/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Plan/PlanCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhblxQbGFuQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Plan/PlanList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhblxQbGFuTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Plan/PlanUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhblxQbGFuVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FPT/kỳ 8/PRoject/Client/Pages/Privacy.cshtml]
@@ -34,6 +58,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Task/TaskCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza1xUYXNrQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Task/TaskList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza1xUYXNrTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Task/TaskUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza1xUYXNrVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPT/kỳ 8/PRoject/Client/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +77,10 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/FPT/kỳ 8/PRoject/Client/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPT/kỳ 8/PRoject/Client/Pages/Authen/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVuXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-4j6cawfin7
 
 [D:/FPT/kỳ 8/PRoject/Client/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
